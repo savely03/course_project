@@ -7,7 +7,7 @@ public class Employee {
     private final String fullName; // Полное имя
     private int department; // Департамент
     private int salary; // Зарплата
-    private static int numberId = 1; // Счетчик id
+    private static int idCounter; // Счетчик id
     int id; // id
 
     public Employee(String middleName, String firstName, String lastName, int department, int salary) {
@@ -17,7 +17,7 @@ public class Employee {
         this.fullName = middleName + " " + firstName + " " + lastName;
         this.department = department;
         this.salary = salary;
-        this.id = numberId++;
+        this.id = ++idCounter;
     }
 
     public String getMiddleName() {
