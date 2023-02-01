@@ -28,8 +28,7 @@ public class Main {
     public static void printAllEmployees() {
         System.out.println("Список всех работников:");
 
-        /* Arrays.stream(employees).
-                forEach(employee -> System.out.println(" " + employee)); Решение через Stream API */
+        // Arrays.stream(employees).forEach(System.out::println); Решение через Stream API */
 
         for (Employee employee : employees) {
             System.out.println(" " + employee);
@@ -137,7 +136,7 @@ public class Main {
     }
 
     /**
-     * Метод заполняет массив на основе текстового файла, который содержит ровно 10 работников
+     * Метод заполняет массив на основе текстового файла (employees.txt), который содержит ровно 10 работников
      */
     public static void fillEmployeesArray() {
         try (Scanner scanner = new Scanner(new File("employees.txt"))) {
