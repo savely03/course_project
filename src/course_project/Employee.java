@@ -8,7 +8,7 @@ public class Employee {
     private int department; // Департамент
     private int salary; // Зарплата
     private static int idCounter; // Счетчик id
-    int id; // id
+    private final int id; // id
 
     public Employee(String middleName, String firstName, String lastName, int department, int salary) {
         this.middleName = middleName;
