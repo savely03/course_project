@@ -144,11 +144,6 @@ public class Main {
     }
 
 
-    public static Employee[] getEmployeesByDep(int department) {
-        return Arrays.stream(employees).
-                filter(employee -> employee.getDepartment() == department).toArray(Employee[]::new);
-    }
-
     /**
      * Метод индексирует зарплаты работников
      *
@@ -174,6 +169,19 @@ public class Main {
         if (department < 1 || department > 5) {
             throw new IllegalArgumentException("Неверный номер департамента!");
         }
+    }
+
+
+    /**
+     * Метод возвращает массив работников по выбранному отделу
+     *
+     * @param department Номер отдела
+     * @return Массив работников
+     */
+    public static Employee[] getEmployeesByDep(int department) {
+        checkDepartment(department);
+        return Arrays.stream(employees).
+                filter(employee -> employee.getDepartment() == department).toArray(Employee[]::new);
     }
 
     /**
