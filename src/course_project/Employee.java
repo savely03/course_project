@@ -6,7 +6,7 @@ public class Employee {
     private final String lastName; // Отчество
     private final String fullName; // Полное имя
     private int department; // Департамент
-    private int salary; // Зарплата
+    private double salary; // Зарплата
     private static int idCounter; // Счетчик id
     private final int id; // id
 
@@ -44,16 +44,21 @@ public class Employee {
         this.department = department;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
     public int getId() {
         return id;
+    }
+
+
+    public String printBaseEmployeeInfo() {
+        return "id=" + id + ", ФИО=" + fullName + ", Зарплата=" + salary + " руб.";
     }
 
     @Override
@@ -65,4 +70,6 @@ public class Employee {
                 ", Зарплата=" + salary + "руб." +
                 '}';
     }
+
+
 }
