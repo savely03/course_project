@@ -163,7 +163,7 @@ public class Main {
     /**
      * Метод вызывает ошибку, если указанный отдел не существует
      *
-     * @param department Номер департамента
+     * @param department Номер отдела
      */
     public static void checkDepartment(int department) {
         if (department < 1 || department > 5) {
