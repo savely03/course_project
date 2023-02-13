@@ -10,7 +10,7 @@ public class Employee {
     private static int idCounter; // Счетчик id
     private final int id; // id
 
-    public Employee(String middleName, String firstName, String lastName, int department, int salary) {
+    public Employee(String middleName, String firstName, String lastName, int department, double salary) {
         this.middleName = middleName;
         this.firstName = firstName;
         this.lastName = lastName;
