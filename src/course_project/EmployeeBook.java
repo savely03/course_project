@@ -351,6 +351,7 @@ public class EmployeeBook {
                 return;
             }
         }
+        System.out.println("Нельзя добавить нового работника, массив полон!");
     }
 
     /**
@@ -362,8 +363,10 @@ public class EmployeeBook {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null && employees[i].getFullName().equals(fullName)) {
                 employees[i] = null;
+                return;
             }
         }
+        System.out.println("Работника с таким именем не существует!");
     }
 
     /**
@@ -375,8 +378,10 @@ public class EmployeeBook {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] != null && employees[i].getId() == id) {
                 employees[i] = null;
+                return;
             }
         }
+        System.out.println("Работника с таким id не существует!");
     }
 
     /**
@@ -404,6 +409,8 @@ public class EmployeeBook {
         Employee employee;
         if ((employee = findEmployeeByFullName(fullName)) != null) {
             employee.setSalary(salary);
+        } else {
+            System.out.println("Работника с таким именем не существует!");
         }
     }
 
@@ -419,6 +426,8 @@ public class EmployeeBook {
         Employee employee;
         if ((employee = findEmployeeByFullName(fullName)) != null) {
             employee.setDepartment(department);
+        } else {
+            System.out.println("Работника с таким именем не существует!");
         }
     }
 
